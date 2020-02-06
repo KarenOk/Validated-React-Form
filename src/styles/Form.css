@@ -1,0 +1,7 @@
+.register-form {
+    padding: 50px 20px;
+}
+
+.register-form input.invalid {
+    border: 1px solid red;
+}
