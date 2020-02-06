@@ -1,0 +1,35 @@
+.form-modal .modal-title {
+    color: #0197CD;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.form-modal .modal-footer button {
+    margin: 10px;
+    font-size: 1em;
+    background-color: rgb(247, 180, 66);
+    color: white;
+}
+
+.form-modal button[type="submit"] {
+    background-color: #0197CD;
+    border: 1px solid #0197CD;
+    color: white;
+    font-weight: 500;
+    width: 50%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 350px) {
+    .form-modal {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .form-modal {
+        font-size: 0.8em;
+    }
+}
