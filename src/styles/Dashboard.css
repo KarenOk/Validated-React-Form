@@ -1,0 +1,24 @@
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #0197CD;
+}
+
+@media only screen and (max-width: 500px) {
+    .dashboard h1 {
+        font-size: 1.5em;
+    }
+    .dashboard img {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .dashboard h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
