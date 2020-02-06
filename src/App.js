@@ -1,26 +1,34 @@
 import React from 'react';
 import logo from './images/logo.svg';
+import FormModal from "./components/FormModal";
+import Dashboard from "./components/Dashboard";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      registered: false
+    }
+  }
+
+  register = () => { this.setState({ registered: true }) }
+
+  render() {
+    return (
+      <div className="app">
+        {this.state.registered ?
+          <Dashboard /> :
+          <div className="register-page">
+            <img src={logo} alt="logo" className="logo" />
+            <button className="btn register" data-toggle="modal" data-target="#form-modal"> Register </button>
+            <FormModal register={this.register} />
+          </div>
+
+        }
+      </div>
+    );
+  }
 }
 
 export default App;
