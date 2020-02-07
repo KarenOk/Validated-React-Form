@@ -39,23 +39,23 @@ class FormModal extends React.Component {
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
 
-                        <div className="modal-header">
+                        <header className="modal-header">
                             <h5 className="modal-title" id="exampleModalLongTitle"> Sign Up </h5>
                             <button type="button" ref={ref => this.closeModal = ref} className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                        </header>
 
-                        <div className="modal-body">
+                        <main className="modal-body">
                             <Form
                                 onSubmit={this.register}
                                 allowSubmit={this.allowSubmit}
                                 allowNav={this.allowNav}
                                 page={this.state.pages[this.state.currentPage]}
                             />
-                        </div>
+                        </main>
 
-                        <div className="modal-footer text-center">
+                        <footer className="modal-footer text-center">
                             {this.state.currentPage === this.state.pages.length - 1 ?
                                 <button
                                     type="submit"
@@ -68,7 +68,7 @@ class FormModal extends React.Component {
                             }
                             <button className="btn" disabled={this.state.currentPage === 0} onClick={() => this.navigatePages("backward")}> Prev </button>
                             <button className="btn" disabled={this.state.currentPage === this.state.pages.length - 1 || !this.state.allowNav} onClick={() => this.navigatePages("forward")} hidden={this.state.currentPage === this.state.pages.length - 1}> Next </button>
-                        </div>
+                        </footer>
 
                     </div>
                 </div>
